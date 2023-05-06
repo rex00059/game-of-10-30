@@ -1,1 +1,45 @@
+#ifndef Card_H
+#define Card_H
+#include<string>
+using namespace std;
 
+class Card{
+private:
+    string suit;
+    string rank;
+public:
+   
+    Card(string s, string r);
+    
+    void setSuit(string s);
+
+    void setRank(string r);
+
+    string getSuit();
+    string getRank();
+};
+#endif
+#include<iostream>
+#include<string>
+#include "Card.h"
+using namespace std;
+
+Card::Card(string s, string r) {
+    suit = s;
+    rank = r;
+}
+// getter
+void Card::setSuit(string s) {
+    suit = s;
+}
+
+void Card::setRank(string r) {
+    rank = r;
+}
+
+string Card::getSuit() {
+    return suit;
+}
+string Card::getRank() {
+    return rank;
+}
